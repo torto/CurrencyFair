@@ -1,0 +1,13 @@
+.home {
+  margin-top: 1rem;
+}
+
+.list-map-card {
+  max-height: 10rem;
+  overflow:auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.list-map-card .list-group-item {
+  min-height: 3rem;
+}

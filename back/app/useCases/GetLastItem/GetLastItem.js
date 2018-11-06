@@ -1,14 +1,9 @@
-const fs = require('fs');
-const config = require('../../../config/envConfig')()
+const dependencies = {
+  getAllItens: require('../GetAllItens/GetAllItens')
+}
 
-module.exports = (item) => {
-  const NAME_FILE = config.nameFileBD
-  return new Promise((resolve, reject) => {
-    fs.readFile(NAME_FILE, "utf8", (e, data) => {
-      if(e) reject(e)
-      let values = []
-      if(data) values = JSON.parse(data)
-      resolve(values[values.length - 1])
-    })
-  })
+module.exports = async (injection) => {
+  const {getAllItens} = Object.assign({}, dependencies, injection)
+  const values = await getAllItens()
+  return values[values.length - 1]
 }

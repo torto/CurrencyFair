@@ -1,26 +1,55 @@
 {
-  "name": "currencyFair",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "cors": "^2.8.4",
-    "dotenv": "^6.1.0",
-    "express": "^4.16.4",
-    "express-joi": "^0.3.1",
-    "express-load": "^1.1.16",
-    "express-rate-limit": "^3.3.0",
-    "helmet": "^3.14.0",
-    "lodash": "^4.17.11",
-    "method-override": "^3.0.0",
-    "moment": "^2.22.2",
-    "nodemon": "^1.18.5",
-    "socket.io": "^2.1.1"
-  }
+ "name": "currencyFair",
+ "version": "1.0.0",
+ "description": "",
+ "main": "server.js",
+ "scripts": {
+  "test": "NODE_ENV=development NODE_PATH=./ mocha \"./{,!(node_modules)/**/}*.test.js\" --colors --reporter spec",
+  "test:watch": "yarn test -- --watch --reporter min",
+  "test:watch:debug": "yarn test -- --watch --reporter min --inspect",
+  "coverage": "nyc yarn test"
+ },
+ "author": "",
+ "license": "ISC",
+ "dependencies": {
+  "body-parser": "^1.18.3",
+  "chai": "^4.2.0",
+  "chai-as-promised": "^7.1.1",
+  "cors": "^2.8.4",
+  "dotenv": "^6.1.0",
+  "express": "^4.16.4",
+  "express-load": "^1.1.16",
+  "express-rate-limit": "^3.3.0",
+  "helmet": "^3.14.0",
+  "lodash": "^4.17.11",
+  "method-override": "^3.0.0",
+  "mocha": "^5.2.0",
+  "moment": "^2.22.2",
+  "nodemon": "^1.18.5",
+  "nyc": "^13.1.0",
+  "sinon": "^7.1.1",
+  "socket.io": "^2.1.1"
+ },
+ "nyc": {
+  "statements": 95,
+  "branches": 90,
+  "functions": 95,
+  "lines": 90,
+  "check-coverage": true,
+  "reporter": [
+   "lcov",
+   "text",
+   "text-summary"
+  ]
+ },
+ "standard": {
+  "globals": [
+   "describe",
+   "it",
+   "after",
+   "afterEach",
+   "before",
+   "beforeEach"
+  ]
+ }
 }

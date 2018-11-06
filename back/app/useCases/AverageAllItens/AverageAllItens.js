@@ -1,6 +1,9 @@
-const getAllItens = require('../GetAllItens/GetAllItens')
+const dependencies = {
+  getAllItens: require('../GetAllItens/GetAllItens')
+}
 
-module.exports = async function AverageAllItens(values) {
+module.exports = async function AverageAllItens(values, injection) {
+  const {getAllItens} = Object.assign({}, dependencies, injection)
   if (!values) values = await getAllItens()
   const valuesReduce = values.reduce((max, value) => {
     return {

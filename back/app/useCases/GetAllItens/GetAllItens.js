@@ -1,7 +1,10 @@
-const fs = require('fs');
-const config = require('../../../config/envConfig')()
+const dependencies = {
+  fs: require('fs'),
+  config: require('../../../config/envConfig')()
+}
 
-module.exports = (item) => {
+module.exports = (injection) => {
+  const {fs, config} = Object.assign({}, dependencies, injection)
   const NAME_FILE = config.nameFileBD
   return new Promise((resolve, reject) => {
     fs.readFile(NAME_FILE, "utf8", (e, data) => {

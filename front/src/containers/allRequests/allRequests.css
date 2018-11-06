@@ -1,0 +1,9 @@
+.list-requests {
+  max-height: 30rem;
+}
+.react-bootstrap-table>table>thead>tr>th
+.date-filter-input,
+.react-bootstrap-table>table>thead>tr>th
+.number-filter-input {
+  width: 100%;
+}

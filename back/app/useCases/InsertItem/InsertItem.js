@@ -1,7 +1,10 @@
-const fs = require('fs');
-const config = require('../../../config/envConfig')()
+const dependencies = {
+  fs: require('fs'),
+  config: require('../../../config/envConfig')()
+}
 
-module.exports = (item) => {
+module.exports = (item, injection) => {
+  const {fs, config} = Object.assign({}, dependencies, injection)
   const NAME_FILE = config.nameFileBD
   return new Promise ((resolve, reject) => {
     fs.readFile(NAME_FILE, "utf8", (e, data) => {
@@ -12,7 +15,7 @@ module.exports = (item) => {
 
       fs.writeFile(NAME_FILE, JSON.stringify(values), (err) => {
         if(err) reject(err)
-        resolve()
+        resolve({})
       })
     })
   })
