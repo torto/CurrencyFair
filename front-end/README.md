@@ -1,20 +1,25 @@
-<p align="center"><a href="https://medium.com/@notrab/getting-started-with-create-react-app-redux-react-router-redux-thunk-d6a19259f71f"><img src="https://i.imgur.com/PATsTx2.png" title="View tutorial" alt="React, React Router, Redux and Redux Thunk" width="900"></a></p>
+## Clone
 
-* Tutorial: [Getting started with create-react-app, Redux, React Router & Redux Thunk](https://medium.com/@notrab/getting-started-with-create-react-app-redux-react-router-redux-thunk-d6a19259f71f)
-* [Demo](https://create-react-app-redux.now.sh) 🙌
+`$~: git clone git@github.com:torto/CurrencyFair.git`
 
-## Installation
+## Install and Execute
 
-```bash
-git clone https://github.com/notrab/create-react-app-redux.git
-cd create-react-app-redux
-yarn
-```
+`~$ cd front-end`
 
-## Get started
+`~/back-end$ npm install`
 
-```bash
-yarn start
-```
+`~/back-end$ npm run start`
 
-This boilerplate is built using [create-react-app](https://github.com/facebook/create-react-app) so you will want to read the User Guide for more goodies.
+
+## URL
+
+Main url: `http://localhost:3000`
+
+
+## Tests
+
+Normal test: `~/front-end$ npm run test`
+
+Coverage: `~/front-end$ npm run coverage`
+
+![Coverage front-end](../coverage-front.png)

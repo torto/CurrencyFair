@@ -3,12 +3,9 @@
   "homepage": "https://torto.github.io/curriculo",
   "scripts": {
     "start": "react-scripts start",
-    "now-start": "serve -s ./build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "coverage": "react-scripts test --env=jsdom --coverage",
-    "eject": "react-scripts eject",
-    "precommit": "pretty-quick --staged"
   },
   "devDependencies": {
     "prettier": "1.14.3",

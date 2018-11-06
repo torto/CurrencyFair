@@ -4,6 +4,7 @@
  "description": "",
  "main": "server.js",
  "scripts": {
+   "start": "node server.js",
   "test": "NODE_ENV=development NODE_PATH=./ mocha \"./{,!(node_modules)/**/}*.test.js\" --colors --reporter spec",
   "test:watch": "yarn test -- --watch --reporter min",
   "test:watch:debug": "yarn test -- --watch --reporter min --inspect",
