@@ -5,7 +5,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "coverage": "react-scripts test --env=jsdom --coverage",
+    "coverage": "react-scripts test --env=jsdom --coverage"
   },
   "devDependencies": {
     "prettier": "1.14.3",
