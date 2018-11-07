@@ -6,9 +6,9 @@
 
 `~$ cd front-end`
 
-`~/back-end$ npm install`
+`~/front-end$ npm install`
 
-`~/back-end$ npm run start`
+`~/front-end$ npm run start`
 
 
 ## URL
